@@ -19,4 +19,4 @@ $maximumPwdAge = New-TimeSpan -Days $MaxPwdAge
 $minimumPwdAge = New-TimeSpan -Days $MinPwdAge
 
 
-Set-ADDefaultDomainPasswordPolicy -ComplexityEnabled $true -MaxPasswordAge $maxPwdAge -MinPasswordAge $minPwdAge -MinPasswordLength $MinPwdLength -PasswordHistoryCount $PwdHistoryCount -Identity $Identity
+Set-ADDefaultDomainPasswordPolicy -ComplexityEnabled $true -MaxPasswordAge $maximumPwdAge -MinPasswordAge $minimumPwdAge -MinPasswordLength $MinPwdLength -PasswordHistoryCount $PwdHistoryCount -Identity $Identity
