@@ -1,0 +1,25 @@
+{
+    "$5": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {
+           "type": "string",
+           "metadata": {
+                "description": ""
+            }
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts/providers/locks",
+            "apiVersion": "2016-09-01",
+            "name": "[concat(parameters('storageAccountName'), '/Microsoft.Authorization/storageDoNotDelete')]",
+            "comments": "Resource lock on diagnostic storage account",
+            "properties": {
+                "level": "CannotDelete"
+            }
+        }
+    ],
+    "outputs": {}
+}
