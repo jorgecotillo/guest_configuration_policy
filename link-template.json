@@ -24,6 +24,6 @@
         }
     ],
     "outputs": {
-        "name" : { "value" : "[variables('storageAccountName')]" }
+        "name" : { "type": "string", "value" : "[variables('storageAccountName')]" }
     }
 }
