@@ -24,9 +24,6 @@
         }
     ],
     "outputs": {
-        "stgName" : {
-            "type": "string",
-            "value" : "[variables('storageAccountName')]"
-        }
+        "stgName" : { "type": "string", "value" : "[variables('storageAccountName')]" }
     }
 }
