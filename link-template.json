@@ -24,6 +24,13 @@
         }
     ],
     "outputs": {
-        "stgName" : { "type": "string", "value" : "[variables('storageAccountName')]" }
+        "stgName" : { 
+            "value" : "[variables('storageAccountName')]" ,
+            "type": "string"
+        },
+        "greetingMessage": {
+            "value": "Hello World",
+            "type" : "string"
+        }
     }
 }
