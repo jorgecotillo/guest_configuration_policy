@@ -9,11 +9,13 @@
             }
         }
     },
-    "variables": {},
+    "variables": {
+        "storageAccountName" : "[uniqueString(parameters('name'), deployment().name)]"
+    },
     "resources": [
         {
             "type": "Microsoft.Storage/storageAccounts",
-            "name": "[uniqueString(parameters('name'), deployment().name)]",
+            "name": "[variables('storageAccountName')]",
             "apiVersion": "2015-06-15",
             "location": "[resourceGroup().location]",
             "properties": {
@@ -21,5 +23,7 @@
             }
         }
     ],
-    "outputs": {}
+    "outputs": {
+        "name" : { "value" : "[variables('storageAccountName')]" }
+    }
 }
