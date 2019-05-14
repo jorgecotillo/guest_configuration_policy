@@ -27,10 +27,6 @@
         "stgName" : { 
             "value" : "[variables('storageAccountName')]" ,
             "type": "string"
-        },
-        "greetingMessage": {
-            "value": "Hello World",
-            "type" : "string"
         }
     }
 }
