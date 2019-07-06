@@ -17,3 +17,14 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: AzurePowerShell@4
+  inputs:
+    azureSubscription: 'Jorge - AzureCAT (cf0c53fb-06f5-4fe3-9c25-cabce6811cb1)'
+    ScriptType: 'InlineScript'
+    Inline: |
+      # You can write your azure powershell scripts inline here. 
+      # You can also pass predefined and custom variables to this script using arguments
+      
+      Write-Host "Hello World"
+    azurePowerShellVersion: 'LatestVersion'
